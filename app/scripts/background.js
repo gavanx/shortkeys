@@ -306,13 +306,13 @@ let handleAction = (action, request = {}) => {
   } else if (action === 'scrollupmore') {
     browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: -500, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'pageup') {
-    browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: -window.innerHeight, behavior: "' + smoothScrolling + '"})'})
+    browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: -window.innerHeight + 30, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'scrolldown') {
     browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: 50, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'scrolldownmore') {
     browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: 500, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'pagedown') {
-    browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: window.innerHeight, behavior: "' + smoothScrolling + '"})'})
+    browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: 0, top: window.innerHeight - 30, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'scrollleft') {
     browser.tabs.executeScript(null, {'code': 'window.scrollBy({left: -50, top: 0, behavior: "' + smoothScrolling + '"})'})
   } else if (action === 'scrollleftmore') {
